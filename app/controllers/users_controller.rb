@@ -23,6 +23,11 @@ class UsersController < ApplicationController
         # redirect_to "/profile"
         # refactored with route helpers:
         redirect_to profile_path
+        #redirect_to '/profile'
+        # res.redirect('/profile')
+        # app.get('/profile', function(req, res ) {
+        #  res.render('profile')
+        #  })
       else
         flash[:error] = user.errors.full_messages.join(', ')
         # redirect_to "/signup"
